@@ -20,8 +20,8 @@ public class CharGrid {
 	 * @return area for given char
 	 */
 	public int charArea(char ch) {
-		int rows = grid.length();
-		int cols = grid[0].length();
+		int rows = grid.length;
+		int cols = grid[0].length;
 		
 		// khởi tạo giá trị biên
 		int minRow = rows, maxRow = -1, minCol = cols, maxCol = -1;
@@ -48,7 +48,7 @@ public class CharGrid {
 		int a = 1;
 
 		while (rows - a >= 0 && cols - a >= 0 &&
-			rows + a < grid.length() && cols + a < grid[0].length() &&
+			rows + a < grid.length && cols + a < grid[0].length &&
 			grid[rows -  a][cols] == ch && grid[rows +  a][cols] == ch &&
 			grid[rows][cols - a] == ch && grid[rows][cols + a] == ch) {
 				a++;
@@ -62,8 +62,8 @@ public class CharGrid {
 	 */
 	public int countPlus() {
 		int cnt = 0;
-		int rows = grid.length();
-		int cols = grid[0].length();
+		int rows = grid.length;
+		int cols = grid[0].length;
 
 		for (int i = 1; i < rows - 1; i++) {
 			for (int j = 1; j < cols - 1; j++) {
